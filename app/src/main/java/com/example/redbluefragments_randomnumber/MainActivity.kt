@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         supportFragmentManager.setFragmentResultListener(RANDOM_NUMBER_VIEWED, this) {
             requestKey, bundle -> // Swap out blue fragment for red fragment
                 supportFragmentManager.beginTransaction()
-                    .add(R.id.fragmentContainerView, RedFragment.newInstance())
+                    .replace(R.id.fragmentContainerView, RedFragment.newInstance())
                     .addToBackStack("RED")
                     .commit()
         }
